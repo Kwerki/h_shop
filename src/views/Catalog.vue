@@ -4,6 +4,7 @@
             class="product"
             v-for="product in store.products"
             :key="product.id"
+            @click="goToProductPage(product.id)"
             >
             <img :src="product.thumbnail" alt="">
             <h2>Brand: {{ product.brand }}</h2>
@@ -22,10 +23,17 @@
 </script>
 
 <script setup>
-    import { onMounted } from 'vue';
+    import { onMounted} from 'vue';
     import { productsStore } from '../stores/products';
+    import { useRouter} from 'vue-router';
 
     const store = productsStore()
+    const router = useRouter()
+
+
+    const goToProductPage = (id) => {
+        router.push({name: 'ProductDetail', params: {id}})
+    }
 
     onMounted(async () => {
 

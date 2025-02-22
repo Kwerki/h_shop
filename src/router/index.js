@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Catalog from "../views/Catalog.vue";
+import ProductDetail from "../views/ProductDetail.vue";
+import Cart from "../views/Cart.vue";
 
 
 const router = createRouter({
@@ -7,8 +9,18 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Catalog',
       component: Catalog,
+    },
+    {
+      path: '/product/:id',
+      name: 'ProductDetail',
+      component: ProductDetail,
+    },
+    {
+      path: '/cart',
+      name: 'CartView',
+      component: Cart,
     },
   ],
 })

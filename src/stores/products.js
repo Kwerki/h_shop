@@ -4,6 +4,7 @@ import { defineStore } from 'pinia'
 export const productsStore = defineStore('products', {
   state: () => ({
     products: [],
+    cart: []
   }),
 
   actions: {
@@ -13,6 +14,11 @@ export const productsStore = defineStore('products', {
       .then(json => {
         this.products = json.products;
       })
+    },
+
+    addToCart(product){
+      this.cart.push(product);
     }
+    
   }
 })
