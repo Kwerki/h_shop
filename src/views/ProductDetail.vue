@@ -1,5 +1,7 @@
 <template>
-    <button @click="$router.push({name: 'Catalog'})">Back to Catalog</button>
+  <v-container>
+    <v-btn @click="$router.push({name: 'Catalog'})">Back to Catalog</v-btn>
+  </v-container>
     <div class="product">
         <div class="product-image">
             <img :src="selectedProduct.thumbnail" alt="">
@@ -8,7 +10,9 @@
             <p>Brand: {{ selectedProduct.brand }}</p>
             <p>Description: {{ selectedProduct.description }}</p>
             <h2>Price: ${{ selectedProduct.price }}</h2>
-            <button @click="addToCard">Add to cart</button>
+          <v-container>
+            <v-btn @click="addToCard">Add to cart</v-btn>
+          </v-container>
         </div>
     </div>
 </template>

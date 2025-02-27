@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,3 +10,12 @@ main {
     margin: 0 auto;
     padding: 16px
 }
+
+.v-btn {
+    color: #CFD8DC;
+}
+
+
+.v-btn:hover {
+    background-color: #B0BEC5;
+}  
