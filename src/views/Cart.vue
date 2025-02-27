@@ -55,6 +55,9 @@ export default defineComponent({
 
 .item-detail img{
     width: 20%;
+    height: 20%;
 }
+
+
 
 </style>
